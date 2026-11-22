@@ -1,6 +1,6 @@
 # Multi-Tenant Cloud POS & Restaurant Management SaaS — Currently In Active Build
 
-[![Release](https://img.shields.io/badge/Release-v0.9.0--beta-emerald?style=for-the-badge&logo=git)](https://github.com/RG-Creators/cloud-pos-saas-showcase)
+[![Release](https://img.shields.io/badge/Release-v0.9.1--beta-emerald?style=for-the-badge&logo=git)](https://github.com/RG-Creators/cloud-pos-saas-showcase)
 [![Architecture](https://img.shields.io/badge/Architecture-Multi--Tenant%20SaaS-blue?style=for-the-badge&logo=blueprint)](https://github.com/RG-Creators/cloud-pos-saas-showcase)
 [![Tech Stack](https://img.shields.io/badge/Stack-Laravel%20|%20MySQL%20|%20Livewire%20|%20ESC%2FPOS-orange?style=for-the-badge&logo=laravel)](https://github.com/RG-Creators/cloud-pos-saas-showcase)
 [![Verification](https://img.shields.io/badge/Verified-1%2C024%20Assertions%20Passing-success?style=for-the-badge&logo=checkmarx)](https://github.com/RG-Creators/cloud-pos-saas-showcase)
@@ -95,11 +95,31 @@ Engineered with sub-50ms reactive billing interactions, integer-safe currency co
   10. Announcement & Flash Sale Top Bar
   11. Footer, Social Links & Compliance Portals
 
-### 6. Multi-Outlet Owner Analytics *(In Active Development)*
+### 6. Sales Employee Tracking & Commission Ledger Engine
+- **Sales Agent ID Generator:** Super-Admin generates and manages unique sales employee codes (e.g., `SALES101`) with configurable commission rates per tier.
+- **Tier Commission Matrix:**
+  - `Solo / Solo Lite`: ₹50 per successful plan sale
+  - `Starter`: ₹50 per successful plan sale
+  - `Growth`: ₹300 per successful plan sale
+  - `Pro / Enterprise`: ₹300 per successful plan sale
+- **Attribution & Onboarding Tracking:** Optional `REF` referral code on registration tags new tenants to sales employees, preserving exact onboarding records and plan conversions.
+- **Financial Ledger & Settle-to-Disable Guard:** Real-time computation of onboarded restaurants, plans sold, cumulative commission earned, disbursement payouts, and pending balances. An automated financial safety guard prevents agent deletion or deactivation while any unsettled balance remains.
+
+### 7. 14-Day All-Access Unlocked Trial & Modular Gates
+- **Complete Feature Experience:** Trial accounts receive unlocked access to all advanced capabilities (up to 5 branches, 25 staff members, 50 dining tables, 10 waiters, Kitchen Display System, and recipe costing) to demonstrate full platform power and drive upgrades.
+- **Registration Modular Opt-Outs:** Clean checkbox toggles on account creation allow restaurants to opt out of the Storefront Website or Table QR Menu; opted-out modules are cleanly gated while core POS operations remain frictionless.
+
+### 8. Transparent Commercial Architecture & Two-Column Checkout
+- **First-Year Annual Incentive:** 2 months free built directly into annual billing (e.g. Starter ₹499/mo billed at ₹4,990/yr for year 1, renewing at ₹5,988/yr).
+- **Pass-through Gateway Charge:** Dynamic 2.5% payment gateway transaction fee calculated at checkout with explicit aggregator disclosure (zero platform retention).
+- **Zero Setup Fee Guarantee:** One-time platform setup fee waived for instantaneous frictionless onboarding.
+- **Two-Column Responsive Tax Invoice Modal:** Pinned header and action footer with itemized SAC 998313 (18% GST) calculation and official B2B tax invoice fields (Business Legal Name, State of Supply, and optional GSTIN).
+
+### 9. Multi-Outlet Owner Analytics *(In Active Development)*
 - **Consolidated Multi-Branch Telemetry:** Real-time visibility into gross sales, average table turn time, void/refund volumes, and peak order velocity across all brand outlets.
 - **Centralized Menu & Inventory Management:** Unified recipe catalogs with central stock tracking and transfer logs between commissary and branch stores.
 
-### 7. Staff QR Attendance + Ledger & Payslip Engine *(In Active Development)*
+### 10. Staff QR Attendance + Ledger & Payslip Engine *(In Active Development)*
 - **Contactless Punch Clock:** Staff verify shifts via dynamic QR code scanning and geofenced device checks.
 - **Automated Late Auditing & Payroll Ledger:** Late-punch review workflow for managers (`confirmLatePunch`), automated shift overtime computation, monthly salary ledgers, and exportable digital payslips.
 
@@ -123,7 +143,8 @@ Engineered with sub-50ms reactive billing interactions, integer-safe currency co
 
 | Version | Status | Milestone Highlights |
 | :---: | :---: | :--- |
-| `v0.9.0-beta` | **Current Release** | Multi-tenant DB isolation, SaaS subscription engine, Super-Admin cockpit, parallel 3-printer hardware bridge (BKOT/KKOT/BILL), virtual printer simulator, modular website builder. |
+| `v0.9.0-beta` | **Released** | Multi-tenant DB isolation, SaaS subscription engine, Super-Admin cockpit, parallel 3-printer hardware bridge (BKOT/KKOT/BILL), virtual printer simulator, modular website builder. |
+| `v0.9.1-beta` | **Current Release** | Sales employee referral tracking & commission ledger, unlocked 14-day trial experience, modular onboarding opt-outs, responsive two-column checkout modal, gateway fee pass-through, zero setup fee guarantee. |
 | `v0.9.5-beta` | *In Progress* | Multi-outlet brand owner analytics dashboard, cross-branch menu syncing, and inventory transfer ledger. |
 | `v1.0.0-rc1` | *Planned* | Staff QR attendance with geofence verification, automated shift ledger, and PDF payslip generator. |
 | `v1.0.0-ga` | *Planned* | Native Windows/Electron desktop companion with background print spooler and offline-first cache sync. |
